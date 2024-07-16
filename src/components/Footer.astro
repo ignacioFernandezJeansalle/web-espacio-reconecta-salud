@@ -1,0 +1,110 @@
+---
+import { links } from "@/data/data.json";
+
+import IconInstagram from "@/icons/IconInstagram.astro";
+import IconFacebook from "@/icons/IconFacebook.astro";
+import IconWhatsapp from "@/icons/IconWhatsapp.astro";
+import IconYoutube from "@/icons/IconYoutube.astro";
+import IconTwitter from "@/icons/IconTwitter.astro";
+import IconMail from "@/icons/IconMail.astro";
+import IconMaps from "@/icons/IconMaps.astro";
+---
+
+<footer>
+  <section class="container">
+    <p class="footer-titulo">Acá me podés encontrar...</p>
+    <ul>
+      <li>
+        <a href={links.instagram} target="_blank" aria-label="Instagram" rel="noopener"
+          ><IconInstagram class="footer-icon" /></a
+        >
+      </li>
+      <li>
+        <a href={links.facebook} target="_blank" aria-label="Facebook" rel="noopener"
+          ><IconFacebook class="footer-icon" /></a
+        >
+      </li>
+      <li>
+        <a href={links.whatsapp} target="_blank" aria-label="Whatsapp" rel="noopener"
+          ><IconWhatsapp class="footer-icon" /></a
+        >
+      </li>
+      <li>
+        <a href={links.youtube} target="_blank" aria-label="Youtube" rel="noopener"
+          ><IconYoutube class="footer-icon" /></a
+        >
+      </li>
+      <li>
+        <a href={links.twitter} target="_blank" aria-label="Twitter" rel="noopener"
+          ><IconTwitter class="footer-icon" /></a
+        >
+      </li>
+      <li>
+        <a href={links.email} target="_blank" aria-label="Mail" rel="noopener"><IconMail class="footer-icon" /></a>
+      </li>
+      <li>
+        <a href={links.maps} target="_blank" aria-label="Google Maps" rel="noopener"><IconMaps class="footer-icon" /></a
+        >
+      </li>
+    </ul>
+    <div>
+      <p><small>© Copyright 2024 Espacio Reconecta Salud</small></p>
+      <p><small>Desarrollado por <a href={links.developer}>/* Nacho FJ */</a></small></p>
+    </div>
+  </section>
+</footer>
+
+<style>
+  footer {
+    background: var(--bg-color-footer);
+    color: var(--text-color-light);
+    padding-block: 48px;
+    text-align: center;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+  }
+
+  .footer-titulo {
+    font-size: 20px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    align-items: center;
+  }
+
+  a {
+    color: var(--text-color-light);
+  }
+
+  .footer-icon {
+    width: 24px;
+    height: auto;
+    color: var(--bg-color-footer);
+    fill: var(--text-color-light);
+  }
+
+  .footer-icon:hover,
+  a:hover {
+    opacity: 0.8;
+    scale: 1.08;
+  }
+
+  @media (width > 640px) {
+    ul {
+      column-gap: 24px;
+    }
+
+    .footer-icon {
+      width: 28px;
+    }
+  }
+</style>
