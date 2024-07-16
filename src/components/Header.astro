@@ -1,6 +1,6 @@
 ---
-import MenuOpenIcon from "@/icons/MenuOpenIcon.astro";
-import MenuCloseIcon from "@/icons/MenuCloseIcon.astro";
+import IconMenuOpen from "@/icons/IconMenuOpen.astro";
+import IconMenuClose from "@/icons/IconMenuClose.astro";
 ---
 
 <header>
@@ -17,12 +17,12 @@ import MenuCloseIcon from "@/icons/MenuCloseIcon.astro";
       </ul>
 
       <button class="nav-btn-close" id="navBtnClose">
-        <MenuCloseIcon />
+        <IconMenuClose />
       </button>
     </div>
 
     <button class="nav-btn-open" id="navBtnOpen">
-      <MenuOpenIcon />
+      <IconMenuOpen />
     </button>
   </nav>
 </header>
@@ -41,7 +41,7 @@ import MenuCloseIcon from "@/icons/MenuCloseIcon.astro";
     justify-content: space-between;
     align-items: center;
     background: var(--bg-color-navbar);
-    padding: 8px 16px;
+    padding: 6px 16px;
     box-shadow: var(--box-shadow-navbar);
     border-radius: 0 0 4px 4px;
   }
@@ -68,7 +68,6 @@ import MenuCloseIcon from "@/icons/MenuCloseIcon.astro";
   }
 
   .nav-menu ul {
-    list-style: none;
     display: flex;
     flex-direction: column;
     row-gap: 24px;
@@ -76,7 +75,6 @@ import MenuCloseIcon from "@/icons/MenuCloseIcon.astro";
   }
 
   .nav-menu ul li a {
-    text-decoration: none;
     color: var(--text-color-light);
     font-size: 28px;
   }
