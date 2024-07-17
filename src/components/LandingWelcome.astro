@@ -1,0 +1,106 @@
+---
+import { info } from "@/data/data.json";
+---
+
+<section class="container s-p-block">
+  <h2>¡Bienvenid@!</h2>
+  <p class="subtitle">
+    Estoy emocionada de invitarte y acompañarte a sumergirte en una experiencia única de reconexión con tu cuerpo a
+    nivel físico, mental, emocional y espiritual; transformando tu cuerpo y creando una vida que disfrutes.
+  </p>
+
+  <ul class="grid">
+    <li>
+      <p>¿Qué sería de tu vida sin un cuerpo?...Nada, ¿no?</p>
+      <p>
+        No nos enseñaron a escuchar nuestro cuerpo y lo que requiere de nosotros cada día. Se que has probado numerosos
+        tratamientos y herramientas en busca de un cambio profundo en tu vida y tu cuerpo. Pero ahora es el momento de
+        explorar algo diferente, algo que aborde todas las dimensiones de tu ser y te empodere para crear una vida plena
+        y vibrante.
+      </p>
+    </li>
+    <li>
+      <p>
+        En este espacio combino poderosas herramientas para brindarte una experiencia integral de transformación y
+        bienestar.
+      </p>
+      <p>A través de estas técnicas vas a lograr:</p>
+      <ul class="list">
+        <li><b>Reconectar</b> con tu cuerpo y aprender a escucharlo.</li>
+        <li><b>Eliminar</b> patrones y creencias de tu sistema familiar que te limitan.</li>
+        <li><b>Liberar</b> bloqueos energéticos y <b>restaurar</b> tu equilibrio interior.</li>
+        <li><b>Mejorar</b> tu bienestar físico, mental, emocional y espiritual.</li>
+        <li><b>Despertar</b> tu verdadero potencial y <b>disfrutar</b> cada segundo de tu vida.</li>
+      </ul>
+      <p>
+        <b>
+          Cada persona es única, por lo que cada sesión se adapta a tus necesidades individuales, guiándote en un viaje
+          de autodescubrimiento y reconexión profunda.
+        </b>
+      </p>
+    </li>
+    <li>
+      <p>¿Estas dispuesta a iniciar esta aventura de vivir y disfrutar cada día de tu vida y tu cuerpo?</p>
+      <p>
+        Si estás lista para abrirte a nuevas posibilidades de cambio, te invito a explorar nuestra página web, para
+        conocer más sobre nuestras herrramientas y unete a esta experiencia transformadora.
+      </p>
+    </li>
+  </ul>
+
+  <p class="signature">{info.signature}</p>
+</section>
+
+<style>
+  .subtitle {
+    max-width: 992px;
+    padding-inline: 32px;
+    margin-inline: auto;
+    margin-bottom: 24px;
+  }
+
+  .grid {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
+    gap: 8px;
+    margin-bottom: 48px;
+  }
+
+  .grid > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+    box-shadow: var(--box-shadow-salmon-sm);
+  }
+
+  .grid > li:nth-child(2) {
+    grid-row: span 2;
+    background: rgb(var(--bg-color-salmon-rgb), 0.7);
+  }
+
+  .grid > li > p:first-child {
+    font-family: Bashield, serif;
+    font-weight: 600;
+    font-size: calc(var(--font-size) * 1.2);
+    text-wrap: balance;
+  }
+
+  .grid .list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    list-style: disc;
+    padding-left: 32px;
+    margin-bottom: 48px;
+  }
+
+  .signature {
+    font-family: DancingScript, cursive;
+    text-align: center;
+    color: var(--text-color-pink);
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+</style>
