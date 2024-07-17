@@ -1,0 +1,63 @@
+---
+const SERVICES = [
+  {
+    name: "Formación Barras de Access Consciousness",
+    thumbnail: "formacion-barras-access.webp",
+    alt: "Imagen de portada de la Formación Barras de Access Consciousness",
+  },
+  {
+    name: "Mentoría Integral 1 a 1 - S.O.S. Cuerpo Feliz",
+    thumbnail: "mentoria-integral.webp",
+    alt: "Imagen de portada de la Mentoría Integral 1 a 1 - S.O.S. Cuerpo Feliz",
+  },
+];
+---
+
+<section>
+  <div class="container s-p-block">
+    <h2>Servicios</h2>
+    <div class="services">
+      {
+        SERVICES.map((service) => {
+          const baseUrl = "/img/services/";
+          return (
+            <article>
+              <img src={`${baseUrl}${service.thumbnail}`} alt={service.alt} />
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    background: var(--bg-color-salmon);
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, min(100%, 400px));
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .services article {
+    transition: filter 0.3s;
+  }
+
+  .services article:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+  }
+
+  .services article img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 507 / 367;
+    border-radius: 4px;
+  }
+</style>
