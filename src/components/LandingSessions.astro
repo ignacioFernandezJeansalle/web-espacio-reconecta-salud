@@ -1,0 +1,68 @@
+---
+const SESSIONS = [
+  {
+    name: "Herramientas Access Consciousness",
+    thumbnail: "herramientas-access.webp",
+    alt: "Imagen de portada de la sesión Herramientas Access Consciousness",
+  },
+  {
+    name: "Constelaciones Familiares",
+    thumbnail: "constelaciones-familiares.webp",
+    alt: "Imagen de portada de la sesión Constelaciones Familiares",
+  },
+  {
+    name: "Armonización Energética Integral",
+    thumbnail: "armonizacion-energetica-integral.webp",
+    alt: "Imagen de portada de la sesión Armonización Energética Integral",
+  },
+];
+---
+
+<section>
+  <div class="container s-p-block">
+    <h2>Sesiones</h2>
+    <div class="sessions">
+      {
+        SESSIONS.map((service) => {
+          const baseUrl = "/img/sessions/";
+          return (
+            <article>
+              <img src={`${baseUrl}${service.thumbnail}`} alt={service.alt} />
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    background: rgba(var(--bg-color-pink-rgb), 0.5);
+  }
+
+  .sessions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, min(100%, 400px));
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sessions article {
+    transition: filter 0.3s;
+  }
+
+  .sessions article:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+  }
+
+  .sessions article img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 507 / 367;
+    border-radius: 4px;
+  }
+</style>
