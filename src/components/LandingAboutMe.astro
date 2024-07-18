@@ -1,5 +1,100 @@
-<section>
-  <div class="container s-p-block">
-    <h2>Sobre mí</h2>
-  </div>
+<section class="container s-p-block">
+  <h2>Sobre mí</h2>
+
+  <article>
+    <img src="/assets/img/about-me.webp" alt="Selfie Lic. Carolina Castelblanco" />
+
+    <div>
+      <p>
+        <span>Soy Carolina,</span> creadora de Espacio Reconeta Salud, donde brindo herramientas diferentes, que yo misma
+        he experimentado y han cambiado mi vida, para mujeres que quieran reconectarse con su cuerpo, empoderarse, mejorar
+        su salud, tomar las riendas de su bienestar y transformar su vida.
+      </p>
+      <p>
+        <b> A través de mentorias, programas, sesiones, talleres y formación en Barras de Access Consciousness®. </b>
+      </p>
+    </div>
+
+    <div>
+      <p><span>En mi proceso de reconexión con mi cuerpo he logrado:</span></p>
+      <ul>
+        <li>
+          <b>Mejorar</b> mi calidad de vida.
+        </li>
+        <li>
+          <b>Aprender</b> a escuchar mi cuerpo.
+        </li>
+        <li>
+          <b>Disminuir</b> el consumo de medicamentos.
+        </li>
+        <li>
+          <b>Recuperarme</b> de las enfermedades diagnosticadas.
+        </li>
+        <li>
+          <b>Reconectar</b> con mi propio saber y poder.
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <p>
+        Me forme como licenciada en <b>Terapia Ocupacional</b> y facilitadora certificada de
+        <b>Barras de Access Consciousness®</b>.
+      </p>
+      <p>
+        Mi propia búsqueda de sanación me ha llevado a adquirir conocimientos en diversas áreas, como rehabilitación
+        neurocognitiva, Reiki Usui, Flores de Bach, meditación, mesa radiónica, tameana, constelaciones familiares y
+        herramientas de Access Consciousness® (barras, facelift, procesos de cuerpo, procesos verbales).
+      </p>
+      <p>
+        <b>
+          Te invito a ser parte de este camino hacia una vida más plena y consciente. ¡Juntas, podemos lograr grandes
+          cambios y descubrir nuestro propio poder interior!
+        </b>
+      </p>
+    </div>
+  </article>
 </section>
+
+<style>
+  article img {
+    float: right;
+    margin-left: 32px;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(var(--color-pink-dark-rgb), 0.35);
+  }
+
+  article > div {
+    margin-bottom: 48px;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 32px;
+  }
+
+  p {
+    max-width: 1200px;
+  }
+
+  p > span {
+    font-family: Bashield, serif;
+    font-weight: bold;
+    color: rgb(var(--color-pink-dark-rgb));
+  }
+
+  @media (width <= 768px) {
+    article img {
+      float: none;
+      max-width: 350px;
+      margin-inline: auto;
+      margin-bottom: 32px;
+    }
+  }
+</style>
