@@ -1,7 +1,21 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import LandingHero from "@/components/LandingHero.astro";
+import LandingWelcome from "@/components/LandingWelcome.astro";
+import LandingServices from "@/components/LandingServices.astro";
+import LandingSessions from "@/components/LandingSessions.astro";
+import LandingAboutMe from "@/components/LandingAboutMe.astro";
 ---
 
-<Layout title="Título" description="Descripción">
-  <div>Hola mundo!</div>
+<Layout
+  title="Espacio ReConecta Salud"
+  description="Estrategias y herramientas diferentes para reconectar con tu cuerpo, mejorar tu salud y tu vida"
+>
+  <main>
+    <LandingHero />
+    <LandingWelcome />
+    <LandingServices />
+    <LandingSessions />
+    <LandingAboutMe />
+  </main>
 </Layout>
