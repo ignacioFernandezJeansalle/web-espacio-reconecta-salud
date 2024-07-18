@@ -72,12 +72,12 @@ import { info } from "@/data/data.json";
     flex-direction: column;
     justify-content: center;
     padding: 32px;
-    box-shadow: var(--box-shadow-salmon-sm);
+    box-shadow: 0 2px 4px 0 rgba(var(--color-salmon-rgb), 0.35);
   }
 
   .grid > li:nth-child(2) {
     grid-row: span 2;
-    background: rgb(var(--bg-color-salmon-rgb), 0.7);
+    background: rgba(var(--color-salmon-rgb), 0.7);
   }
 
   .grid > li > p:first-child {
@@ -99,7 +99,7 @@ import { info } from "@/data/data.json";
   .signature {
     font-family: DancingScript, cursive;
     text-align: center;
-    color: var(--text-color-pink);
+    color: rgb(var(--color-pink-dark-rgb));
     font-size: 40px;
     margin-bottom: 32px;
   }

@@ -1,4 +1,7 @@
 ---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -15,28 +18,38 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Ignacio Fernández Jeansalle & Pablo Manzoni" />
-    <!-- <meta
+    <meta
       name="keywords"
-      content="Buceo, Buceo PADI Argentina, Cursos de buceo, Viajes de Buceo, Escuela de Buceo, Escuela de Buceo en Capital Federal, Escuela de Buceo PADI en Capital Federal, Clases de Buceo, Buceo en Argentina, Open Water Diver, PADI Dive Center, Atlantida Diving School, Scuba, Scuba diving, centro internacional de buceo, cursos, viajes de buceo, salidas, diving, dive, divecenter, buenos aires buceo, puerto madryn, buceo en patagonia, argentina, buceo en caribe, buceo en brasil, equipos de buceo, tanque, chalecos, trajes, neoprene, reguladores, buzo, bucear, aprender, la cuba de campo de mayo, buceo profesional, advanced, rescate, divemaster, instructor, nitrox, buceo profundo, experiencia, videosub, fotosub, efr, primeros auxilio, canteras salto uruguay, el terrible, padi divecheck, orca, ballenas, cozumel, submarinismo, agua, pileta climatizada, temporada verano, oxigeno, camara hiperbarica"
-    /> -->
+      content="Barras de Access Consciousness, Terapia holística, Terapias holísticas, Sobrepeso, Problemas de piel, Enfermedades de la piel, Tiroides, Rehabilitación, Cuerpo, Terapia ocupacional, Bienestar físico, Bienestar emocional, Bienestar mental, Salud, Sanación, Herramientas, energéticas, Facelift, Procesos de cuerpo, Limpieza energética, Constelaciones familiares, Flores de Bach"
+    />
+    <meta name="email" content="info@espacioreconectasalud.com" />
+    <link rel="icon" href="/favicon.png" />
     <!-- <link rel="canonical" href={canonicalURL} /> -->
     <!-- <link rel="sitemap" href="/sitemap-index.xml" /> -->
-    <!-- <link rel="icon" href="/favicon.png" /> -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 
 <style is:global>
   :root {
-    --bg-color-body: #fbf1de;
-    --bg-color-navbar: #52366c;
-    --bg-color-pink: #ac74ac;
-    --bg-color-salmon: #de907f;
+    /* COLORES */
 
-    --font-size: 16px;
+    /* #fbf1de */
+    --color-light-rgb: 251, 241, 222;
+    /* #2b1936 */
+    --color-dark-rgb: 43, 25, 54;
+    /* #ac74ac */
+    --color-pink-light-rgb: 172, 116, 172;
+    /* #52366c */
+    --color-pink-dark-rgb: 82, 54, 108;
+    /* #de907f */
+    --color-salmon-rgb: 222, 144, 127;
+
+    --font-size: 18px;
   }
 
   * {
@@ -45,11 +58,140 @@ const { title, description } = Astro.props;
     box-sizing: border-box;
   }
 
+  @font-face {
+    font-family: Bashield;
+    src: url(/fonts/Bashield.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Bashield;
+    font-style: italic;
+    src: url(../fonts/Bashield_Italic.otf) format(opentype);
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Minerva;
+    src: url(/fonts/Minerva_Modern_Regular.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Minerva;
+    src: url(/fonts/Minerva_Modern_Bold.otf) format(opentype);
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Minerva;
+    font-style: italic;
+    src: url(/fonts/Minerva_Modern_Italic.otf) format(opentype);
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Minerva_Black;
+    src: url(/fonts/Minerva_Modern_Black.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Minerva_Black;
+    src: url(/fonts/Minerva_Modern_Black_Italic.otf) format(opentype);
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: DancingScript;
+    src: url(/fonts/DancingScript_Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: DancingScript;
+    src: url(/fonts/DancingScript_Medium.ttf) format(truetype);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: DancingScript;
+    src: url(/fonts/DancingScript_Bold.ttf) format(truetype);
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
   body {
-    /* font-family: $font-family; */
-    /* font-style: $font-style; */
-    /* letter-spacing: $font-letter-spacing; */
+    font-family: Minerva, sans-serif;
+    font-weight: normal;
+    font-style: normal;
     font-size: var(--font-size);
-    background: var(--bg-color-body);
+    color: rgb(var(--color-dark-rgb));
+    background: rgb(var(--color-light-rgb));
+  }
+
+  .container {
+    max-width: 1400px;
+    padding-inline: 16px;
+    margin: 0 auto;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    font-family: Bashield, serif;
+    font-weight: 700;
+    text-align: center;
+    text-wrap: balance;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+  }
+
+  h1 {
+    --h1-font-size: 64px;
+    font-size: var(--h1-font-size);
+    margin-bottom: calc(var(--h1-font-size) * 0.8);
+  }
+
+  h2 {
+    --h2-font-size: 32px;
+    font-size: var(--h2-font-size);
+    margin-bottom: calc(var(--h2-font-size) * 0.8);
+    color: rgb(var(--color-pink-dark-rgb));
+  }
+
+  p {
+    --p-font-size: var(--font-size);
+    font-size: var(--p-font-size);
+    margin-bottom: calc(var(--p-font-size) * 0.8);
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .s-p-block {
+    padding-block: 64px;
   }
 </style>

@@ -40,9 +40,9 @@ import IconMenuClose from "@/icons/IconMenuClose.astro";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--bg-color-navbar);
+    background: rgb(var(--color-pink-dark-rgb));
+    box-shadow: 0 4px 8px 0 rgba(var(--color-pink-dark-rgb), 0.35);
     padding: 6px 16px;
-    box-shadow: var(--box-shadow-navbar);
     border-radius: 0 0 4px 4px;
   }
 
@@ -75,7 +75,7 @@ import IconMenuClose from "@/icons/IconMenuClose.astro";
   }
 
   .nav-menu ul li a {
-    color: var(--text-color-light);
+    color: rgb(var(--color-light-rgb));
     font-size: 28px;
   }
 
@@ -84,7 +84,7 @@ import IconMenuClose from "@/icons/IconMenuClose.astro";
     background: transparent;
     border: none;
     cursor: pointer;
-    color: var(--text-color-light);
+    color: rgb(var(--color-light-rgb));
   }
 
   .nav-btn-close {
