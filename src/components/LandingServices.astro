@@ -1,13 +1,15 @@
 ---
-const SERVICES = [
+import LandingCards from "@/components/LandingCards.astro";
+
+const SERVICES_CARDS = [
   {
     name: "Formación Barras de Access Consciousness",
-    thumbnail: "formacion-barras-access.webp",
+    thumbnail: "/assets/img/services/formacion-barras-access.webp",
     alt: "Imagen de portada de la Formación Barras de Access Consciousness",
   },
   {
     name: "Mentoría Integral 1 a 1 - S.O.S. Cuerpo Feliz",
-    thumbnail: "mentoria-integral.webp",
+    thumbnail: "/assets/img/services/mentoria-integral.webp",
     alt: "Imagen de portada de la Mentoría Integral 1 a 1 - S.O.S. Cuerpo Feliz",
   },
 ];
@@ -16,48 +18,12 @@ const SERVICES = [
 <section id="services">
   <div class="container s-p-block">
     <h2>Servicios</h2>
-    <div class="services">
-      {
-        SERVICES.map((service) => {
-          const baseUrl = "/assets/img/services/";
-          return (
-            <article>
-              <img src={`${baseUrl}${service.thumbnail}`} alt={service.alt} />
-            </article>
-          );
-        })
-      }
-    </div>
+    <LandingCards cards={SERVICES_CARDS} />
   </div>
 </section>
 
 <style>
   section {
     background: rgb(var(--color-salmon-rgb));
-  }
-
-  .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, min(100%, 400px));
-    gap: 16px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .services article {
-    transition: filter 0.3s;
-  }
-
-  .services article:hover {
-    cursor: pointer;
-    filter: brightness(0.8);
-  }
-
-  .services article img {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 507 / 367;
-    border-radius: 4px;
   }
 </style>
