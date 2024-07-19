@@ -1,0 +1,42 @@
+---
+const { cards } = Astro.props;
+---
+
+<div class="cards">
+  {
+    cards.map(({ thumbnail, alt }) => {
+      return (
+        <article>
+          <img src={thumbnail} alt={alt} />
+        </article>
+      );
+    })
+  }
+</div>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, min(100%, 400px));
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cards article {
+    transition: filter 0.3s;
+  }
+
+  .cards article:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+  }
+
+  .cards article img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 507 / 367;
+    border-radius: 4px;
+  }
+</style>
