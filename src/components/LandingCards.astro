@@ -4,11 +4,11 @@ const { cards } = Astro.props;
 
 <div class="cards">
   {
-    cards.map(({ thumbnail, alt }) => {
+    cards.map(({ name, thumbnail, alt, url }) => {
       return (
-        <article>
+        <a href={url} aria-label={name}>
           <img src={thumbnail} alt={alt} />
-        </article>
+        </a>
       );
     })
   }
@@ -23,16 +23,16 @@ const { cards } = Astro.props;
     justify-content: center;
   }
 
-  .cards article {
+  .cards a {
     transition: filter 0.3s;
   }
 
-  .cards article:hover {
+  .cards a:hover {
     cursor: pointer;
     filter: brightness(0.8);
   }
 
-  .cards article img {
+  .cards a img {
     display: block;
     width: 100%;
     height: auto;
