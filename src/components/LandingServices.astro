@@ -1,24 +1,12 @@
 ---
 import LandingCards from "@/components/LandingCards.astro";
-
-const SERVICES_CARDS = [
-  {
-    name: "Formación Barras de Access Consciousness",
-    thumbnail: "/assets/img/services/formacion-barras-access.webp",
-    alt: "Imagen de portada de la Formación Barras de Access Consciousness",
-  },
-  {
-    name: "Mentoría Integral 1 a 1 - S.O.S. Cuerpo Feliz",
-    thumbnail: "/assets/img/services/mentoria-integral.webp",
-    alt: "Imagen de portada de la Mentoría Integral 1 a 1 - S.O.S. Cuerpo Feliz",
-  },
-];
+import { services } from "@/data/data.json";
 ---
 
 <section id="services">
   <div class="container s-p-block">
     <h2>Servicios</h2>
-    <LandingCards cards={SERVICES_CARDS} />
+    <LandingCards cards={services} />
   </div>
 </section>
 

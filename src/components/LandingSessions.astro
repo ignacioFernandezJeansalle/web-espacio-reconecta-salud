@@ -1,29 +1,12 @@
 ---
 import LandingCards from "@/components/LandingCards.astro";
-
-const SESSIONS_CARDS = [
-  {
-    name: "Herramientas Access Consciousness",
-    thumbnail: "/assets/img/sessions/herramientas-access.webp",
-    alt: "Imagen de portada de la sesión Herramientas Access Consciousness",
-  },
-  {
-    name: "Constelaciones Familiares",
-    thumbnail: "/assets/img/sessions/constelaciones-familiares.webp",
-    alt: "Imagen de portada de la sesión Constelaciones Familiares",
-  },
-  {
-    name: "Armonización Energética Integral",
-    thumbnail: "/assets/img/sessions/armonizacion-energetica-integral.webp",
-    alt: "Imagen de portada de la sesión Armonización Energética Integral",
-  },
-];
+import { sessions } from "@/data/data.json";
 ---
 
 <section id="sessions">
   <div class="container s-p-block">
     <h2>Sesiones</h2>
-    <LandingCards cards={SESSIONS_CARDS} />
+    <LandingCards cards={sessions} />
   </div>
 </section>
 
