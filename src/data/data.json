@@ -13,5 +13,39 @@
     "email": "mailto:espacioreconectasalud@gmail.com",
     "maps": "https://maps.app.goo.gl/sxvx9ejEE3DWLnGH6",
     "developer": "https://www.linkedin.com/in/ignaciofernandezjeansalle/"
-  }
+  },
+  "services": [
+    {
+      "name": "Formación Barras de Access Consciousness®",
+      "thumbnail": "/assets/img/services/formacion-barras-access.webp",
+      "alt": "Imagen de portada de la Formación Barras de Access Consciousness®",
+      "url": "/services/barras-de-access"
+    },
+    {
+      "name": "Mentoría Integral 1 a 1 - S.O.S. Cuerpo Feliz",
+      "thumbnail": "/assets/img/services/mentoria-integral.webp",
+      "alt": "Imagen de portada de la Mentoría Integral 1 a 1 - S.O.S. Cuerpo Feliz",
+      "url": "/services/mentoria-integral"
+    }
+  ],
+  "sessions": [
+    {
+      "name": "Herramientas Access Consciousness®",
+      "thumbnail": "/assets/img/sessions/herramientas-access.webp",
+      "alt": "Imagen de portada de la sesión Herramientas Access Consciousness®",
+      "url": "/sessions/herramientas-access"
+    },
+    {
+      "name": "Constelaciones Familiares",
+      "thumbnail": "/assets/img/sessions/constelaciones-familiares.webp",
+      "alt": "Imagen de portada de la sesión Constelaciones Familiares",
+      "url": "/sessions/constelaciones-familiares"
+    },
+    {
+      "name": "Armonización Energética Integral",
+      "thumbnail": "/assets/img/sessions/armonizacion-energetica-integral.webp",
+      "alt": "Imagen de portada de la sesión Armonización Energética Integral",
+      "url": "/sessions/armonizacion-energetica-integral"
+    }
+  ]
 }
