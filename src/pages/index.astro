@@ -1,10 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import SectionContainer from "@/components/SectionContainer.astro";
-import LandingWelcome from "@/components/LandingWelcome.astro";
-import LandingServices from "@/components/LandingServices.astro";
-import LandingSessions from "@/components/LandingSessions.astro";
-import LandingAboutMe from "@/components/LandingAboutMe.astro";
+import Hero from "@/components/landing/Hero.astro";
+import Welcome from "@/components/landing/Welcome.astro";
+import Services from "@/components/landing/Services.astro";
+import Sessions from "@/components/landing/Sessions.astro";
+import AboutMe from "@/components/landing/AboutMe.astro";
 
 const TITLE = "Espacio ReConecta Salud";
 const DESCRIPTION = "Estrategias y herramientas diferentes para reconectar con tu cuerpo, mejorar tu salud y tu vida";
@@ -12,42 +12,10 @@ const DESCRIPTION = "Estrategias y herramientas diferentes para reconectar con t
 
 <Layout title={TITLE} description={DESCRIPTION}>
   <main>
-    {/********** HERO **********/}
-    <SectionContainer class="hero">
-      <h1 class="container">
-        Empoderando <span>a las MUJERES a</span> reconectar <span>con su CUERPO,</span> mejorar <span>su SALUD y</span> disfrutar
-        <span>su VIDA</span>
-      </h1>
-    </SectionContainer>
-
-    <LandingWelcome />
-    <LandingServices />
-    <LandingSessions />
-    <LandingAboutMe />
+    <Hero />
+    <Welcome />
+    <Services />
+    <Sessions />
+    <AboutMe />
   </main>
 </Layout>
-
-<style lang="scss">
-  .hero {
-    background: rgb(var(--color-pink-light-rgb));
-
-    h1 {
-      color: rgb(var(--color-light-rgb));
-      margin-bottom: 0;
-      padding-block: 224px;
-
-      span {
-        color: rgb(var(--color-pink-dark-rgb));
-      }
-    }
-  }
-
-  @media (width <= 640px) {
-    .hero {
-      h1 {
-        font-size: 40px;
-        padding-block: 140px;
-      }
-    }
-  }
-</style>

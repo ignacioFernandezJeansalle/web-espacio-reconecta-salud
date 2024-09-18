@@ -51,7 +51,7 @@ import { info } from "@/data/data.json";
   <p class="signature">{info.signature}</p>
 </section>
 
-<style>
+<style lang="scss">
   .subtitle {
     max-width: 992px;
     padding-inline: 32px;
@@ -65,35 +65,35 @@ import { info } from "@/data/data.json";
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
     gap: 8px;
     margin-bottom: 48px;
-  }
 
-  .grid > li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 32px;
-    box-shadow: 0 2px 4px 0 rgba(var(--color-salmon-rgb), 0.35);
-  }
+    & > li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px;
+      box-shadow: 0 2px 4px 0 rgba(var(--color-salmon-rgb), 0.35);
 
-  .grid > li:nth-child(2) {
-    grid-row: span 2;
-    background: rgba(var(--color-salmon-rgb), 0.7);
-  }
+      &:nth-child(2) {
+        grid-row: span 2;
+        background: rgba(var(--color-salmon-rgb), 0.7);
+      }
 
-  .grid > li > p:first-child {
-    font-family: Bashield, serif;
-    font-weight: 600;
-    font-size: calc(var(--font-size) * 1.2);
-    text-wrap: balance;
-  }
+      & > p:first-child {
+        font-family: Bashield, serif;
+        font-weight: 600;
+        font-size: calc(var(--font-size) * 1.2);
+        text-wrap: balance;
+      }
+    }
 
-  .grid .list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 6px;
-    list-style: disc;
-    padding-left: 32px;
-    margin-bottom: 48px;
+    .list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+      list-style: disc;
+      padding-left: 32px;
+      margin-bottom: 48px;
+    }
   }
 
   .signature {
