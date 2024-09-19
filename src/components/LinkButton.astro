@@ -1,0 +1,73 @@
+---
+const { href, target, rel, colorPrimary } = Astro.props;
+const color = colorPrimary ? "primary" : "secondary";
+---
+
+<div>
+  <a class={color} href={href} target={target} rel={rel}>
+    <span>
+      <slot />
+    </span>
+  </a>
+</div>
+
+<style lang="scss">
+  $background-primary: rgb(var(--color-pink-dark-rgb));
+  $background-primary-h: rgb(var(--color-pink-light-rgb));
+  $color-primary: rgb(var(--color-light-rgb));
+  $color-primary-h: $background-primary;
+
+  $background-secondary: rgb(var(--color-salmon-rgb));
+  $background-secondary-h: rgb(var(--color-light-rgb));
+  $color-secondary: rgb(var(--color-dark-rgb));
+  $color-secondary-h: $background-primary;
+
+  div {
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: inline-block;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: 600;
+      width: auto;
+      height: 48px;
+      line-height: 48px;
+      padding-inline: 24px;
+      cursor: pointer;
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
+
+      &.primary {
+        background: $background-primary;
+        color: $color-primary;
+
+        &:hover {
+          background: $background-primary-h;
+          color: $color-primary-h;
+        }
+      }
+
+      &.secondary {
+        background: $background-secondary;
+        color: $color-secondary;
+
+        &:hover {
+          background: $background-secondary-h;
+          color: $color-secondary-h;
+        }
+      }
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 8px;
+        height: 100%;
+      }
+    }
+  }
+</style>
