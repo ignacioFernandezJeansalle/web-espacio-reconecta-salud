@@ -1,0 +1,41 @@
+---
+let { left, borderRadius } = Astro.props;
+
+let float = "right";
+let marginLeft = "32px";
+let marginRight = "0";
+
+if (left) {
+  float = "left";
+  marginLeft = "0";
+  marginRight = "32px";
+}
+
+borderRadius = !borderRadius ? "none" : borderRadius;
+---
+
+<img src="/assets/img/about-me.webp" alt="Selfie Lic. Carolina Castelblanco" />
+
+<style define:vars={{ float, marginLeft, marginRight, borderRadius }}>
+  img {
+    float: var(--float);
+    margin-left: var(--marginLeft);
+    margin-right: var(--marginRight);
+    margin-bottom: 32px;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--borderRadius);
+    box-shadow: 0 4px 8px 0 rgba(var(--color-pink-dark-rgb), 0.35);
+  }
+
+  @media (width <= 768px) {
+    img {
+      float: none;
+      max-width: 350px;
+      margin-inline: auto;
+    }
+  }
+</style>
