@@ -1,0 +1,19 @@
+---
+import IconCheckbox from "@/icons/IconCheckbox.astro";
+---
+
+<li>
+  <span>
+    <IconCheckbox />
+  </span>
+  <span>
+    <slot />
+  </span>
+</li>
+
+<style>
+  li {
+    display: flex;
+    column-gap: 16px;
+  }
+</style>
