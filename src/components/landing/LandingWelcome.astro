@@ -1,5 +1,5 @@
 ---
-import { info } from "@/data/data.json";
+import Signature from "../Signature.astro";
 ---
 
 <section class="container s-p-block">
@@ -48,7 +48,7 @@ import { info } from "@/data/data.json";
     </li>
   </ul>
 
-  <p class="signature">{info.signature}</p>
+  <Signature />
 </section>
 
 <style lang="scss">
@@ -94,13 +94,5 @@ import { info } from "@/data/data.json";
       padding-left: 32px;
       margin-bottom: 48px;
     }
-  }
-
-  .signature {
-    font-family: DancingScript, cursive;
-    text-align: center;
-    color: rgb(var(--color-pink-dark-rgb));
-    font-size: 40px;
-    margin-bottom: 32px;
   }
 </style>
