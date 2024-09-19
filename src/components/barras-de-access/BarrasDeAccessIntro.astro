@@ -1,0 +1,104 @@
+---
+import LinkButton from "@/components/LinkButton.astro";
+import IconHeart from "@/icons/IconHeart.astro";
+---
+
+<section class="container s-p-block">
+  <h2>¿Estás buscando algo diferente, una manera efectiva de cambiar tu vida y tu cuerpo?</h2>
+
+  <ul class="grid">
+    <li>
+      <p>
+        Te presento las Barras de Access Consciousness®, una herramienta revolucionaria que puede marcar la diferencia
+        que estás buscando.
+      </p>
+      <p>
+        Las Barras son 32 puntos energéticos en la cabeza que, cuando son suavemente tocados, liberan la carga
+        electromagnética de todos los pensamientos, ideas, actitudes y creencias limitantes que has almacenado a lo
+        largo de tu vida y que te han mantenido atrapado en patrones de comportamiento no deseados, estrés y bloqueos
+        emocionales.
+      </p>
+    </li>
+    <li>
+      <p>Esta herramienta puede ayudarte a:</p>
+      <ul class="list">
+        <li>
+          <b>Despejar</b> tu mente, <b>relajar</b> tu cuerpo y <b>abrirte</b> a una nueva forma de experimentar la vida.
+        </li>
+        <li><b>Reducir</b> el estrés y la ansiedad.</li>
+        <li><b>Mejorar</b> la calidad del sueño.</li>
+        <li>
+          <b>Aumentar</b> la claridad y enfoque mental, al despejar la mente de pensamientos repetitivos y limitantes.
+        </li>
+        <li><b>Mejorar</b> la salud y el bienestar físico.</li>
+        <li>
+          <b>Potenciar</b> la creatividad y la intuición, abriendote a nuevas ideas, perspectivas y oportunidades creativas.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <b>
+        No te conformes con menos! Si estás listo para dar un giro en tu vida y experimentar algo verdaderamente
+        transformador, las Barras de Access Consciousness® son para ti. Descubre el potencial ilimitado que reside en
+        ti y da paso a una vida más plena y consciente.
+      </b>
+    </li>
+    <li>
+      <p>
+        ¡Regístrate ahora para alguna de nuestras próximas clases de Barras de Access Consciousness® y abre las puertas
+        hacia un nuevo nivel de bienestar y posibilidades de cambiar tu vida!
+      </p>
+    </li>
+  </ul>
+
+  <LinkButton href="https://meet.brevo.com/lic-carolina-castelblanco" colorPrimary={true} target="_blank">
+    ¡Quiero anotarme! <IconHeart />
+  </LinkButton>
+</section>
+
+<style lang="scss">
+  .grid {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
+    gap: 8px;
+    margin-bottom: 48px;
+
+    & > li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px;
+      box-shadow: 0 2px 4px 0 rgba(var(--color-salmon-rgb), 0.35);
+
+      &:nth-child(3) {
+        grid-column: 1 / -1;
+      }
+
+      &:nth-child(4) {
+        grid-column: 1 / -1;
+        background: rgba(var(--color-salmon-rgb), 0.7);
+
+        p {
+          text-align: center;
+          margin: 0;
+        }
+      }
+
+      & > p:first-child {
+        font-family: Bashield, serif;
+        font-weight: 600;
+        font-size: calc(var(--font-size) * 1.2);
+        text-wrap: balance;
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+      list-style: disc;
+      padding-left: 32px;
+    }
+  }
+</style>
