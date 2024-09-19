@@ -1,4 +1,5 @@
 ---
+import { links } from "@/data/data.json";
 import LinkButton from "@/components/LinkButton.astro";
 import IconHeart from "@/icons/IconHeart.astro";
 ---
@@ -51,7 +52,7 @@ import IconHeart from "@/icons/IconHeart.astro";
     </li>
   </ul>
 
-  <LinkButton href="https://meet.brevo.com/lic-carolina-castelblanco" colorPrimary={true} target="_blank">
+  <LinkButton href={links.brevo} colorPrimary={true} target="_blank">
     ¡Quiero anotarme! <IconHeart />
   </LinkButton>
 </section>
