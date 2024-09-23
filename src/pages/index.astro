@@ -1,21 +1,19 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Hero from "@/components/landing/Hero.astro";
-import Welcome from "@/components/landing/Welcome.astro";
-import Services from "@/components/landing/Services.astro";
-import Sessions from "@/components/landing/Sessions.astro";
-import AboutMe from "@/components/landing/AboutMe.astro";
+import Hero from "@/components/landing/LandingHero.astro";
+import Welcome from "@/components/landing/LandingWelcome.astro";
+import Services from "@/components/landing/LandingServices.astro";
+import Sessions from "@/components/landing/LandingSessions.astro";
+import AboutMe from "@/components/landing/LandingAboutMe.astro";
 
 const TITLE = "Espacio ReConecta Salud";
 const DESCRIPTION = "Estrategias y herramientas diferentes para reconectar con tu cuerpo, mejorar tu salud y tu vida";
 ---
 
 <Layout title={TITLE} description={DESCRIPTION}>
-  <main>
-    <Hero />
-    <Welcome />
-    <Services />
-    <Sessions />
-    <AboutMe />
-  </main>
+  <Hero />
+  <Welcome />
+  <Services />
+  <Sessions />
+  <AboutMe />
 </Layout>

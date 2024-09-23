@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 
@@ -20,16 +21,19 @@ const { title, description } = Astro.props;
     <meta name="author" content="Ignacio Fernández Jeansalle & Pablo Manzoni" />
     <meta
       name="keywords"
-      content="Barras de Access Consciousness, Terapia holística, Terapias holísticas, Sobrepeso, Problemas de piel, Enfermedades de la piel, Tiroides, Rehabilitación, Cuerpo, Terapia ocupacional, Bienestar físico, Bienestar emocional, Bienestar mental, Salud, Sanación, Herramientas, energéticas, Facelift, Procesos de cuerpo, Limpieza energética, Constelaciones familiares, Flores de Bach"
+      content="Barras de Access Consciousness®, Terapia holística, Terapias holísticas, Sobrepeso, Problemas de piel, Enfermedades de la piel, Tiroides, Rehabilitación, Cuerpo, Terapia ocupacional, Bienestar físico, Bienestar emocional, Bienestar mental, Salud, Sanación, Herramientas, energéticas, Facelift, Procesos de cuerpo, Limpieza energética, Constelaciones familiares, Flores de Bach"
     />
     <meta name="email" content="info@espacioreconectasalud.com" />
     <link rel="icon" href="/favicon.png" />
     <!-- <link rel="canonical" href={canonicalURL} /> -->
     <!-- <link rel="sitemap" href="/sitemap-index.xml" /> -->
+    <ViewTransitions />
   </head>
   <body>
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
@@ -55,6 +59,7 @@ const { title, description } = Astro.props;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-margin-top: 0;
   }
 
   @font-face {
@@ -164,15 +169,22 @@ const { title, description } = Astro.props;
   }
 
   h1 {
-    --h1-font-size: 64px;
-    font-size: var(--h1-font-size);
-    margin-bottom: calc(var(--h1-font-size) * 0.8);
+    --font-size: 64px;
+    font-size: var(--font-size);
+    margin-bottom: calc(var(--font-size) * 0.8);
   }
 
   h2 {
-    --h2-font-size: 32px;
-    font-size: var(--h2-font-size);
-    margin-bottom: calc(var(--h2-font-size) * 0.8);
+    --font-size: 32px;
+    font-size: var(--font-size);
+    margin-bottom: calc(var(--font-size) * 0.8);
+    color: rgb(var(--color-pink-dark-rgb));
+  }
+
+  h3 {
+    --font-size: 24px;
+    font-size: var(--font-size);
+    margin-bottom: calc(var(--font-size) * 0.8);
     color: rgb(var(--color-pink-dark-rgb));
   }
 
