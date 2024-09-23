@@ -1,4 +1,5 @@
 ---
+import ItemCourse from "@/components/ItemCourse.astro";
 import ListItemCourse from "@/components/ListItemCourse.astro";
 import { links } from "@/data/data.json";
 import LinkButton from "@/components/LinkButton.astro";
@@ -8,7 +9,7 @@ import IconHeart from "@/icons/IconHeart.astro";
 <section class="container s-p-block">
   <h2>Información del Curso</h2>
 
-  <ul class="grid">
+  <!-- <ul class="grid">
     <li>
       <h3>¿Cómo es la clase?</h3>
       <ul class="list">
@@ -73,6 +74,69 @@ import IconHeart from "@/icons/IconHeart.astro";
         >
       </ul>
     </li>
+  </ul> -->
+
+  <ul>
+    <ItemCourse title="¿Cómo es la clase?">
+      <ul class="list">
+        <ListItemCourse>La formación dura <b>8 horas</b>, se divide en <b>teórico y práctico</b>.</ListItemCourse>
+        <ListItemCourse
+          >Se entrega manual, gráfico de guía y certificado con <b>validez internacional</b>.</ListItemCourse
+        >
+        <ListItemCourse>Recibes dos sesiones y das dos sesiones.</ListItemCourse>
+        <ListItemCourse>Recibes <b>herramientas verbales</b> para acompañarte en tu día a día.</ListItemCourse>
+        <ListItemCourse>
+          Al finalizar ya eres <b>practicante</b>, puedes dar sesiones a otras personas <b
+            >en cualquier lugar del mundo</b
+          > y estarás en el listado de la página oficial de <b>Access Consciousness®</b>.
+        </ListItemCourse>
+        <ListItemCourse
+          >Los niños también pueden hacerlo.<br />
+          <b>Niños hasta 15 años acompañados de un adulto NO PAGAN!</b></ListItemCourse
+        >
+      </ul>
+    </ItemCourse>
+    <ItemCourse title="¿Qué incluye?">
+      <ul class="list">
+        <ListItemCourse>
+          <b>Manual completo</b> con esquemas e informaciones complementarias útiles para cuando facilites una sesión solo.
+        </ListItemCourse>
+        <ListItemCourse
+          ><b>Certificado oficial</b> con validez internacional que te acredita como practicante de barras.</ListItemCourse
+        >
+      </ul>
+    </ItemCourse>
+    <ItemCourse title="¿Para qué tomar una clase?">
+      <ul class="list">
+        <ListItemCourse>
+          Tener una herramienta con <b>certificación laboral e internacional</b> que contribuye a tus consultantes.
+        </ListItemCourse>
+        <ListItemCourse>Mejorar tu <b>salud física, mental y emocional</b>.</ListItemCourse>
+        <ListItemCourse
+          >Eliminar las consideraciones, que compartes con la persona a la que le activas las barras.</ListItemCourse
+        >
+        <ListItemCourse
+          >Empezar a <b>ser tú y crear una vida maravillosa</b> aunque creas que no es posible.</ListItemCourse
+        >
+        <ListItemCourse>
+          Estar <b>más presente en tu vida</b>, soltar tu pasado y cambiar las probabilidades de futuras posibilidades.
+        </ListItemCourse>
+        <ListItemCourse><b>Ganar dinero y tener una nueva posibilidad laboral</b>.</ListItemCourse>
+      </ul>
+    </ItemCourse>
+    <ItemCourse title="Sobre el curso...">
+      <ul class="list">
+        <ListItemCourse><b>Cuando:</b> A definir...</ListItemCourse>
+        <ListItemCourse><b>Donde:</b> Houston, TX.</ListItemCourse>
+        <ListItemCourse>
+          <b>Inversión:</b> U$D440. Los aranceles están estipulados de manera global por Access Consciousness®. <br />
+          La segunda o tercera clase cuesta la mitad U$D220
+        </ListItemCourse>
+        <ListItemCourse
+          ><b>Formas de pago:</b> Transferencia, Mercado Pago (tarjeta de crédito o débito).</ListItemCourse
+        >
+      </ul>
+    </ItemCourse>
   </ul>
 
   <LinkButton href={links.brevo} colorPrimary={true} target="_blank">
@@ -81,7 +145,7 @@ import IconHeart from "@/icons/IconHeart.astro";
 </section>
 
 <style lang="scss">
-  .grid {
+  /*   .grid {
     display: grid;
     grid-auto-rows: min-content;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
@@ -99,11 +163,15 @@ import IconHeart from "@/icons/IconHeart.astro";
         background: rgba(var(--color-salmon-rgb), 0.7);
       }
     }
+  } */
 
-    .list {
-      display: flex;
-      flex-direction: column;
-      row-gap: 6px;
-    }
+  section > ul {
+    margin-bottom: 48px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
   }
 </style>

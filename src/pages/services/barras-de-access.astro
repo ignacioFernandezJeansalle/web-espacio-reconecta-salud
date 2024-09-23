@@ -1,0 +1,21 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/barras-de-access/BarrasDeAccessHero.astro";
+import Introduction from "@/components/barras-de-access/BarrasDeAccessIntroduction.astro";
+import Reference from "@/components/barras-de-access/BarrasDeAccessReference.astro";
+import CourseInfo from "@/components/barras-de-access/BarrasDeAccessCourseInfo.astro";
+import ButtonUp from "@/components/ButtonUp.astro";
+
+const TITLE = "Curso de Barras de Access Consciousness®";
+const DESCRIPTION =
+  "Formación internacional Barras de Access Consciousness®. ¡Transformá tu vida y tu cuerpo, liberanto tu mente!";
+---
+
+<Layout title={TITLE} description={DESCRIPTION}>
+  <Hero />
+  <Introduction />
+  <Reference />
+  <CourseInfo />
+
+  <ButtonUp />
+</Layout>
