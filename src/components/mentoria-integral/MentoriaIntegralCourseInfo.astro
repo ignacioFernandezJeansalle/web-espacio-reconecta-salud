@@ -1,0 +1,125 @@
+---
+import { links } from "@/data/data.json";
+import ListItemCourse from "@/components/ListItemCourse.astro";
+import LinkButton from "@/components/LinkButton.astro";
+---
+
+<section class="container s-p-block">
+  <h2>¡Reconecta con tu cuerpo y transforma tu vida!</h2>
+
+  <ul class="grid">
+    <li>
+      <p>
+        Sé que has probado muchos tratamientos y técnicas en busca de respuestas, yo también estuve ahí, pero la
+        verdadera transformación viene cuando nos conectamos con nuestro cuerpo a un nivel más profundo. Mi enfoque
+        <b>combina técnicas energéticas, la escucha activa de tu cuerpo y la exploración personalizada</b> para ayudarte
+        a descubrir las soluciones que son únicas para ti.
+      </p>
+      <p>
+        <b>Si estás buscando un cambio profundo en tu vida y tu cuerpo</b>, más allá de los tratamientos médicos
+        convencionales, has llegado al lugar adecuado, ya que integro mis conocimientos como terapeuta ocupacional,
+        terapeuta holística y facilitadora de Barras de Access Consciousness®.
+      </p>
+    </li>
+
+    <li>
+      <p><span>Beneficios de la sesión de mentoría:</span></p>
+      <ul class="list">
+        <ListItemCourse
+          >Liberaremos bloqueos y patrones limitantes que han estado obstaculizando tu bienestar.</ListItemCourse
+        >
+        <ListItemCourse>
+          Te enseñaré técnicas prácticas para que puedas mantener una comunicación abierta y fluida con tu cuerpo.
+        </ListItemCourse>
+        <ListItemCourse>
+          Aprenderás a sintonizarte con las señales que tu cuerpo te envía, a comprender sus necesidades y a nutrirlo de
+          la manera que se merece.
+        </ListItemCourse>
+        <ListItemCourse>Lograrás mejorar tu salud física, mental y emocional.</ListItemCourse>
+        <ListItemCourse>
+          Descubrirás una nueva forma de vivir, en la que que reconozcas que tienes el poder de elegir que funciona para
+          ti y disfrutar tu vida.
+        </ListItemCourse>
+      </ul>
+    </li>
+
+    <li>
+      <p>
+        Si estás listo para dejar atrás los enfoques tradicionales y abrirte a una experiencia transformadora, <b
+          >te invito a unirte a mí en este viaje de reconexión corporal.</b
+        > Juntos, desbloquearemos tu potencial y te empoderaremos para que tomes el control de tu vida y tu cuerpo.
+      </p>
+      <p>
+        No pierdas más tiempo buscando respuestas fuera de ti. <b>La clave para tu transformación está en ti mismo.</b>
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <span>
+          ¡Inscríbete ahora al programa de mentoría individual y comienza a crear la vida y el cuerpo que realmente
+          deseas!
+        </span>
+      </p>
+      <p>La sesión se confirma con el <b>total del valor y no es reembolsable.</b></p>
+    </li>
+  </ul>
+
+  <LinkButton href={links.brevo} colorPrimary={true} target="_blank"> Reservar </LinkButton>
+</section>
+
+<style lang="scss">
+  .grid {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+    margin-bottom: 48px;
+
+    & > li {
+      grid-column: 2 / -2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px;
+      box-shadow: 0 2px 4px 0 rgba(var(--color-salmon-rgb), 0.35);
+
+      &:last-child {
+        background: rgba(var(--color-salmon-rgb), 0.6);
+        text-align: center;
+        padding-block: 48px;
+      }
+
+      & > p:last-child {
+        margin-bottom: 0;
+      }
+
+      & > p > span {
+        font-family: Bashield, serif;
+        font-weight: 600;
+        font-size: calc(var(--font-size) * 1.1);
+        text-wrap: balance;
+        color: rgb(var(--color-pink-dark-rgb));
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+      padding-left: 32px;
+    }
+  }
+
+  @media (width <= 640px) {
+    .grid {
+      & > li {
+        grid-column: 1 / -1;
+      }
+
+      .list {
+        padding-left: 0px;
+      }
+    }
+  }
+</style>
