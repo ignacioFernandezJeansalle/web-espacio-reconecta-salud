@@ -1,0 +1,23 @@
+---
+import Tabs from "@/components/react/Tabs";
+import Barras from "@/components/herramientas-access/HerramientasAccessBarras.astro";
+import Facelift from "@/components/herramientas-access/HerramientasAccessFacelift.astro";
+import Esse from "@/components/herramientas-access/HerramientasAccessESSE.astro";
+import ProcesosDeCuerpo from "@/components/herramientas-access/HerramientasAccessProcesosDeCuerpo.astro";
+
+const TABS = [
+  { slot: "barras", name: "Barras" },
+  { slot: "facelift", name: "Facelift" },
+  { slot: "esse", name: "ESSE" },
+  { slot: "procesosDeCuerpo", name: "Procesos de cuerpo" },
+];
+---
+
+<section class="container" style="padding-block: 48px;">
+  <Tabs client:load tabs={TABS}>
+    <Barras slot={TABS[0].slot} />
+    <Facelift slot={TABS[1].slot} />
+    <Esse slot={TABS[2].slot} />
+    <ProcesosDeCuerpo slot={TABS[3].slot} />
+  </Tabs>
+</section>
