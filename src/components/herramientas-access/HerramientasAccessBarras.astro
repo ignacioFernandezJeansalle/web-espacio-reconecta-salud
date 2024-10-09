@@ -1,0 +1,37 @@
+---
+import ListItemCourse from "@/components/ListItemCourse.astro";
+---
+
+<div>
+  <p>
+    Es una <b>técnica energética corporal</b> en la que se libera la mente al tocar 32 puntos en la cabeza, donde se almacenan
+    todos los pensamientos, idea, creencias y puntos de vista, de diferentes áreas de tu vida, brindándote relajación, facilidad,
+    diversión y abundancia en tu vida.
+  </p>
+  <p><b>Beneficios</b></p>
+  <ul class="list">
+    <ListItemCourse><b>Cambio</b> de mirada respecto a la creación y las posibilidades.</ListItemCourse>
+    <ListItemCourse><b>Elimina</b> definitivamente puntos de vista que generan:</ListItemCourse>
+    <ul class="list">
+      <li>Bloqueos mentales, emocionales y físicos.</li>
+      <li>La enfermedad, el dolor y el malestar físico.</li>
+      <li>La ansiedad, el estrés y el insomnio.</li>
+    </ul>
+    <ListItemCourse><b>Estado de meditación</b> constante, sin ruido mental y con más espacio.</ListItemCourse>
+    <ListItemCourse><b>Reconocer</b> quién eres, que quieres y que te hace feliz.</ListItemCourse>
+    <ListItemCourse><b>Reconectar</b> con tu cuerpo y <b>liberar</b> las limitaciones.</ListItemCourse>
+  </ul>
+</div>
+
+<style lang="scss">
+  .list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+
+    & > ul {
+      padding-left: 64px;
+      list-style: disc;
+    }
+  }
+</style>
