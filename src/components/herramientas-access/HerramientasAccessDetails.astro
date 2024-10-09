@@ -1,0 +1,49 @@
+---
+import { links } from "@/data/data.json";
+import LinkButton from "@/components/LinkButton.astro";
+import IconHeart from "@/icons/IconHeart.astro";
+---
+
+<section class="s-p-block">
+  <div class="container">
+    <h2>Detalles de las sesiones</h2>
+
+    <p><b>Modalidad:</b> Presencial</p>
+    <p><b>Duración:</b> 1 hora</p>
+    <p>
+      En las sesiones se aplica la técnica correspondinete mientras la persona se encuentra acostada en la camilla.
+      Durante la sesión puede dormirse, relajarse y no se requiere que hable de su vida o cuente sus situaciones
+      personales si no quiere.
+    </p>
+    <p>La sesión se confirma con el <b>total del valor y no es reembolsable.</b></p>
+    <p><b>Packs con descuento:</b></p>
+    <ul>
+      <li>Combo Energético (integra 2 herramientas a tu gusto)</li>
+      <li>Pack Mensual (4 sesiones de herramienta a elección)</li>
+    </ul>
+
+    <LinkButton href={links.brevo} colorPrimary={true} target="_blank">
+      ¡Quiero anotarme! <IconHeart />
+    </LinkButton>
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    background: rgba(var(--color-pink-light-rgb), 0.5);
+
+    div {
+      max-width: 768px;
+      margin-inline: auto;
+
+      ul {
+        list-style: disc;
+        padding-left: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 48px;
+      }
+    }
+  }
+</style>
