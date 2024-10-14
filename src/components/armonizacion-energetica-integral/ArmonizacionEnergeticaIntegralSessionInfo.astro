@@ -1,0 +1,103 @@
+---
+import ListItemCourse from "@/components/ListItemCourse.astro";
+---
+
+<section class="container s-p-block">
+  <h2>¡Libera tu energía y transforma tu vida!</h2>
+
+  <ul class="grid">
+    <li>
+      <p>
+        Si estás buscando eliminar los bloqueos energéticos que te tienen estancada, elevar la frecuencia vibracional de
+        todas las áreas de tu vida (relaciones, finanzas, salud, trabajo, entre otras) y crear un cambio profundo,
+        simple y con efectos rápidos en tu vida y tu cuerpo, te invito a experimentar este servicio.
+      </p>
+    </li>
+
+    <li>
+      <p><span>Integro varias herramientas que me permiten:</span></p>
+      <ul class="list">
+        <ListItemCourse
+          >Acceder a niveles sutiles de energía y realizar ajustes para restaurar el equilibrio y la armonía en tu ser.</ListItemCourse
+        >
+        <ListItemCourse
+          >Identificar y liberar bloqueos energéticos, patrones limitantes, traumas desde el útero hasta la adolescencia
+          y cargas emocionales que han estado afectando tu vida y tu cuerpo, a nivel físico, mental, emocional y
+          espiritual, que te impida alcanzar tu pleno potencial.</ListItemCourse
+        >
+        <ListItemCourse>Equilibrar la energía de los chakras, los planetas y elementos astrológicos.</ListItemCourse>
+        <ListItemCourse
+          >Enviar vibracionalmente flores de Bach y elevar la frecuencia vibracional de las áreas de tu vida que se
+          requieran.</ListItemCourse
+        >
+      </ul>
+    </li>
+
+    <li>
+      <p>
+        No se trata solo de tratar los síntomas, sino de abordar las raíces de tus desafíos y promover una
+        transformación completa en todos los aspectos de tu ser.
+      </p>
+      <p>
+        Imagina cómo sería vivir con una energía clara y radiante. Experimentarás una sensación de ligereza, renovación,
+        vitalidad, plenitud y claridad en tu vida. Tu cuerpo estará en sintonía con tu mente y tu espíritu, creando un
+        estado de bienestar integral que se reflejará en todas las áreas de tu vida.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <span>
+          ¡Reserva ahora tu sesión de Limpieza Energética Integral y comienza a crear la vida y el cuerpo que realmente
+          deseas! Deja atrás los enfoques convencionales y abre la puerta a una experiencia única y transformadora.
+        </span>
+      </p>
+      <p>¡Libera tu energía y despierta tu verdadero potencial!</p>
+    </li>
+  </ul>
+</section>
+
+<style lang="scss">
+  .grid {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+    margin-bottom: 48px;
+
+    & > li {
+      grid-column: 2 / -2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px;
+      box-shadow: 0 2px 4px 0 rgba(var(--color-salmon-rgb), 0.35);
+
+      &:last-child {
+        background: rgba(var(--color-salmon-rgb), 0.6);
+        text-align: center;
+        padding-block: 48px;
+      }
+
+      & > p:last-child {
+        margin-bottom: 0;
+      }
+
+      & > p > span {
+        font-family: Bashield, serif;
+        font-weight: 600;
+        font-size: calc(var(--font-size) * 1.1);
+        text-wrap: balance;
+        color: rgb(var(--color-pink-dark-rgb));
+      }
+    }
+  }
+
+  @media (width <= 640px) {
+    .grid {
+      & > li {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+</style>
