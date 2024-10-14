@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Hero from "@/components/herramientas-access/HerramientasAccessHero.astro";
+import GeneralHero from "@/components/GeneralHero.astro";
 import SessionsInfo from "@/components/herramientas-access/HerramientasAccessSessionsInfo.astro";
 import Details from "@/components/herramientas-access/HerramientasAccessDetails.astro";
 
@@ -10,7 +10,8 @@ const DESCRIPTION =
 ---
 
 <Layout title={TITLE} description={DESCRIPTION}>
-  <Hero />
+  <GeneralHero titles={["Herramientas", "Access Consciousness®"]} />
+
   <SessionsInfo />
   <Details />
 </Layout>

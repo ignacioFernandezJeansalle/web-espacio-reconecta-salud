@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Hero from "@/components/mentoria-integral/MentoriaIntegralHero.astro";
+import GeneralHero from "@/components/GeneralHero.astro";
 import CourseInfo from "@/components/mentoria-integral/MentoriaIntegralCourseInfo.astro";
 
 const TITLE = "Mentoria 1:1 SOS Cuerpo Feliz";
@@ -9,6 +9,6 @@ const DESCRIPTION =
 ---
 
 <Layout title={TITLE} description={DESCRIPTION}>
-  <Hero />
+  <GeneralHero titles={["Mentoría 1:1", "SOS Cuerpo Feliz"]} />
   <CourseInfo />
 </Layout>
