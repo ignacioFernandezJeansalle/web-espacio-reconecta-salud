@@ -2,6 +2,7 @@
 import { links } from "@/data/data.json";
 import ListItemCourse from "@/components/ListItemCourse.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import IconHeart from "@/icons/IconHeart.astro";
 ---
 
 <section class="container s-p-block">
@@ -65,7 +66,9 @@ import LinkButton from "@/components/LinkButton.astro";
     </li>
   </ul>
 
-  <LinkButton href={links.brevo} colorPrimary={true} target="_blank"> Reservar </LinkButton>
+  <LinkButton href={links.brevo} colorPrimary={true} target="_blank">
+    ¡Quiero anotarme! <IconHeart />
+  </LinkButton>
 </section>
 
 <style lang="scss">
