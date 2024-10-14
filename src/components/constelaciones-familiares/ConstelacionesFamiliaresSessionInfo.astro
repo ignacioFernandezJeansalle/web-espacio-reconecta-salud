@@ -1,0 +1,85 @@
+<section class="container s-p-block">
+  <h2>
+    Descubre la Profunda liberación emocional que te brindan las Constelaciones Familiares: Rompe Creencias Limitantes y
+    Reconecta con tu Cuerpo.
+  </h2>
+
+  <ul class="grid">
+    <li>
+      <p>
+        ¿Te has sentido atrapado por emociones y patrones que parecen no tener explicación? ¿Buscas una forma efectiva
+        de liberarte de creencias limitantes y mejorar tu bienestar en todos los niveles?
+      </p>
+      <p>
+        Las Constelaciones Familiares son una poderosa herramienta que te permitirá explorar y transformar las dinámicas
+        familiares que influyen en tu vida. Podrás reconocer y honrar el sistema familiar al que perteneces, comprender
+        las interacciones y los vínculos que influyen en tu vida actual, y liberarte de los juicios que han limitado tu
+        bienestar.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Al liberar las emociones reprimidas y las creencias limitantes, permites que tu cuerpo encuentre su equilibrio
+        natural. Notarás mejoras en tu funcionalidad física, una mayor vitalidad y una conexión más profunda con tu
+        cuerpo. Esta técnica te ayudará a liberarte de los patrones que han afectado tu bienestar y te abrirá a nuevas
+        posibilidades de bienestar y plenitud.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <span>
+          Reserva ahora tu sesión de Constelaciones Familiares y da el primer paso hacia la liberación emocional, la
+          mejora de tu funcionalidad física y la conexión profunda con tu cuerpo.
+        </span>
+      </p>
+      <p>¡Te espero con los brazos abiertos para acompañarte en este viaje de transformación!</p>
+    </li>
+  </ul>
+</section>
+
+<style lang="scss">
+  .grid {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+    margin-bottom: 48px;
+
+    & > li {
+      grid-column: 2 / -2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px;
+      box-shadow: 0 2px 4px 0 rgba(var(--color-salmon-rgb), 0.35);
+
+      &:last-child {
+        background: rgba(var(--color-salmon-rgb), 0.6);
+        text-align: center;
+        padding-block: 48px;
+      }
+
+      & > p:last-child {
+        margin-bottom: 0;
+      }
+
+      & > p > span {
+        font-family: Bashield, serif;
+        font-weight: 600;
+        font-size: calc(var(--font-size) * 1.1);
+        text-wrap: balance;
+        color: rgb(var(--color-pink-dark-rgb));
+      }
+    }
+  }
+
+  @media (width <= 640px) {
+    .grid {
+      & > li {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+</style>

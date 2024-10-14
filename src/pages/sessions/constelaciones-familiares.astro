@@ -1,5 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import GeneralHero from "@/components/GeneralHero.astro";
+import SessionInfo from "@/components/constelaciones-familiares/ConstelacionesFamiliaresSessionInfo.astro";
+import Details from "@/components/constelaciones-familiares/ConstelacionesFamiliaresDetails.astro";
 
 const TITLE = "Constelaciones Familiares";
 const DESCRIPTION =
@@ -7,5 +10,8 @@ const DESCRIPTION =
 ---
 
 <Layout title={TITLE} description={DESCRIPTION}>
-  <h1 style="margin-top: 150px;">{TITLE}</h1>
+  <GeneralHero titles={["Constelaciones", "Familiares"]} />
+
+  <SessionInfo />
+  <Details />
 </Layout>

@@ -1,0 +1,49 @@
+---
+import { links } from "@/data/data.json";
+import LinkButton from "@/components/LinkButton.astro";
+import IconHeart from "@/icons/IconHeart.astro";
+---
+
+<section class="s-p-block">
+  <div class="container">
+    <h2>Detalles de la sesión</h2>
+
+    <p><b>Modalidad:</b> Online o presencial</p>
+    <p><b>Duración:</b> 1 hora mínimo</p>
+    <p>
+      En las sesiones utilizamos vincores para representar el sistema familiar, se trabaja un tema que te esté generando
+      dificultad, durante la sesión se va trabajando la información que va surgiendo y se usan las herramientas verbales
+      que se requieran para modificar la energía.
+    </p>
+    <p>La sesión se confirma con el <b>total del valor y no es reembolsable.</b></p>
+    <p><b>Packs con descuento:</b></p>
+    <ul>
+      <li>Combo Energético (integra 2 herramientas a tu gusto)</li>
+      <li>Pack Mensual (4 sesiones de herramienta a elección)</li>
+    </ul>
+
+    <LinkButton href={links.brevo} colorPrimary={true} target="_blank">
+      ¡Quiero anotarme! <IconHeart />
+    </LinkButton>
+  </div>
+</section>
+
+<style lang="scss">
+  section {
+    background: rgba(var(--color-pink-light-rgb), 0.5);
+
+    div {
+      max-width: 768px;
+      margin-inline: auto;
+
+      ul {
+        list-style: disc;
+        padding-left: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 48px;
+      }
+    }
+  }
+</style>
